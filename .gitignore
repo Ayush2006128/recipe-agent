@@ -1,0 +1,29 @@
+# NPM files
+node_modules/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build files
+dist/
+build/
+out/
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Genkit files
+.genkit/

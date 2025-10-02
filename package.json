@@ -1,0 +1,22 @@
+{
+  "name": "recipe-agent",
+  "version": "1.0.0",
+  "description": "Simplement agent in genkit",
+  "license": "BSD-3-Clause",
+  "author": "Ayush Muley",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "genkit:ui": "genkit start -- npx tsx --watch src/index.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@genkit-ai/google-genai": "^1.20.0",
+    "@tavily/core": "^0.5.12",
+    "dotenv": "^17.2.3",
+    "genkit": "^1.20.0"
+  }
+}

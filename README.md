@@ -88,6 +88,7 @@ Before you begin, ensure you have the following installed:
 
 - **Node.js**: v18.0.0 or higher
 - **npm**: v9.0.0 or higher
+- **Genkit cli** `npm i -g genkit-cli`
 - **API Keys**:
   - Google Gemini API key ([Get it here](https://ai.google.dev/))
   - Tavily API key ([Get it here](https://tavily.com/))

@@ -10,6 +10,6 @@ export interface RecipeFlowOutput {
   cookTime: string;
   servings: number;
   ingredients: string[];
-  instrictions: string[];
+  instructions: string[];
   tips: (string | undefined)[];
 }

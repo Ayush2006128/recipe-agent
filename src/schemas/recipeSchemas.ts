@@ -12,6 +12,6 @@ export const outputSchema = z.object({
   cookTime: z.string(),
   servings: z.number(),
   ingredients: z.array(z.string()),
-  instrictions: z.array(z.string()),
+  instructions: z.array(z.string()),
   tips: z.array(z.string().optional()),
 });

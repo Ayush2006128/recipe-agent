@@ -1,3 +1,53 @@
+# Genkit Recipe Agent – Production Express API
+
+## Setup
+
+1. Copy env example and fill keys:
+```bash
+cp ENV.example .env
+```
+
+2. Install deps:
+```bash
+npm install
+```
+
+3. Dev server:
+```bash
+npm run dev
+```
+
+4. Build and start:
+```bash
+npm run build && npm start
+```
+
+## Endpoints
+
+- POST `/v1/recipes`
+  - Body:
+```json
+{
+  "ingredient": "Paneer",
+  "restrictions": "vegetarian"
+}
+```
+  - Response: recipe JSON including `instructions`.
+
+- GET `/healthz` → 200 ok
+- GET `/readyz` → 200 when `GOOGLE_API_KEY` and `TAVILY_API_KEY` are set, else 503
+
+## Docker
+
+```bash
+docker build -t recipe-agent .
+# ensure .env is available and pass vars via --env-file or -e
+docker run -p 8080:8080 --env-file .env recipe-agent
+```
+
+## Notes
+- No authentication (per requirements). Consider adding API keys for public exposure.
+- Rate limited to 60 req/min per IP by default.
 # Recipe Agent 🍳
 
 An intelligent AI-powered recipe generator built with Google Genkit that creates personalized recipes based on ingredients and dietary restrictions. The agent leverages web search capabilities to gather real-time information about ingredients and dietary requirements, ensuring accurate and relevant recipe suggestions.
